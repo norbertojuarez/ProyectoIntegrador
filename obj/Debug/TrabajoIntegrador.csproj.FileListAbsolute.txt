@@ -1,0 +1,12 @@
+C:\Users\germa\source\repos\TrabajoIntegrador\bin\Debug\TrabajoIntegrador.exe.config
+C:\Users\germa\source\repos\TrabajoIntegrador\bin\Debug\TrabajoIntegrador.exe
+C:\Users\germa\source\repos\TrabajoIntegrador\bin\Debug\TrabajoIntegrador.pdb
+C:\Users\germa\source\repos\TrabajoIntegrador\obj\Debug\TrabajoIntegrador.csproj.AssemblyReference.cache
+C:\Users\germa\source\repos\TrabajoIntegrador\obj\Debug\TrabajoIntegrador.Properties.Resources.resources
+C:\Users\germa\source\repos\TrabajoIntegrador\obj\Debug\TrabajoIntegrador.csproj.GenerateResource.cache
+C:\Users\germa\source\repos\TrabajoIntegrador\obj\Debug\TrabajoIntegrador.csproj.CoreCompileInputs.cache
+C:\Users\germa\source\repos\TrabajoIntegrador\obj\Debug\TrabajoIntegrador.exe
+C:\Users\germa\source\repos\TrabajoIntegrador\obj\Debug\TrabajoIntegrador.pdb
+C:\Users\germa\source\repos\TrabajoIntegrador\obj\Debug\TrabajoIntegrador.FormLogin.resources
+C:\Users\germa\source\repos\TrabajoIntegrador\obj\Debug\TrabajoIntegrador.FormMenu.resources
+C:\Users\germa\source\repos\TrabajoIntegrador\obj\Debug\TrabajoIntegrador.FormRegistro.resources
