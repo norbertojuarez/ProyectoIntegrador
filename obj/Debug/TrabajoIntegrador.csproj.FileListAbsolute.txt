@@ -10,3 +10,15 @@ C:\Users\germa\source\repos\TrabajoIntegrador\obj\Debug\TrabajoIntegrador.pdb
 C:\Users\germa\source\repos\TrabajoIntegrador\obj\Debug\TrabajoIntegrador.FormLogin.resources
 C:\Users\germa\source\repos\TrabajoIntegrador\obj\Debug\TrabajoIntegrador.FormMenu.resources
 C:\Users\germa\source\repos\TrabajoIntegrador\obj\Debug\TrabajoIntegrador.FormRegistro.resources
+C:\Users\Norberto\Documents\Desarrollo de Software\DOO\ProyectoIntegrador\obj\Debug\TrabajoIntegrador.exe
+C:\Users\Norberto\Documents\Desarrollo de Software\DOO\ProyectoIntegrador\obj\Debug\TrabajoIntegrador.pdb
+C:\Users\Norberto\Documents\Desarrollo de Software\DOO\ProyectoIntegrador\bin\Debug\TrabajoIntegrador.exe.config
+C:\Users\Norberto\Documents\Desarrollo de Software\DOO\ProyectoIntegrador\bin\Debug\TrabajoIntegrador.exe
+C:\Users\Norberto\Documents\Desarrollo de Software\DOO\ProyectoIntegrador\bin\Debug\TrabajoIntegrador.pdb
+C:\Users\Norberto\Documents\Desarrollo de Software\DOO\ProyectoIntegrador\obj\Debug\TrabajoIntegrador.csproj.AssemblyReference.cache
+C:\Users\Norberto\Documents\Desarrollo de Software\DOO\ProyectoIntegrador\obj\Debug\TrabajoIntegrador.FormLogin.resources
+C:\Users\Norberto\Documents\Desarrollo de Software\DOO\ProyectoIntegrador\obj\Debug\TrabajoIntegrador.FormMenu.resources
+C:\Users\Norberto\Documents\Desarrollo de Software\DOO\ProyectoIntegrador\obj\Debug\TrabajoIntegrador.FormRegistro.resources
+C:\Users\Norberto\Documents\Desarrollo de Software\DOO\ProyectoIntegrador\obj\Debug\TrabajoIntegrador.Properties.Resources.resources
+C:\Users\Norberto\Documents\Desarrollo de Software\DOO\ProyectoIntegrador\obj\Debug\TrabajoIntegrador.csproj.GenerateResource.cache
+C:\Users\Norberto\Documents\Desarrollo de Software\DOO\ProyectoIntegrador\obj\Debug\TrabajoIntegrador.csproj.CoreCompileInputs.cache

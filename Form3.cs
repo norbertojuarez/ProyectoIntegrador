@@ -28,13 +28,13 @@ namespace TrabajoIntegrador
             if (textBoxRegistroUsuario.Text != string.Empty && textBoxRegistroContrasenia.Text != string.Empty) 
             {
                 string baseUsuarios = "Usuario: " + textBoxRegistroUsuario.Text + " Contraseña: " + textBoxRegistroContrasenia.Text;
-                StreamReader sr = new StreamReader("C:\\BDUsuarios.txt");
+                StreamReader sr = new StreamReader(Environment.CurrentDirectory + "\\BDUsuarios.txt");
                 string texto = sr.ReadToEnd();
                 sr.Close();
 
                 if (!texto.Contains("Usuario: " + textBoxRegistroUsuario.Text + " "))
                 {                   
-                    StreamWriter sw = new StreamWriter("C:\\BDUsuarios.txt", append: true);
+                    StreamWriter sw = new StreamWriter(Environment.CurrentDirectory + "\\BDUsuarios.txt", append: true);
                     sw.WriteLine(baseUsuarios);
                     sw.Close();
                     labelRegistroError.Text = "";

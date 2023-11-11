@@ -31,7 +31,7 @@ namespace TrabajoIntegrador
                 bool encontrado = false;
                 string line;
                 //leer base de datos de usuarios y contraseñas
-                StreamReader sr = new StreamReader("C:\\BDUsuarios.txt");
+                StreamReader sr = new StreamReader(Environment.CurrentDirectory+"\\BDUsuarios.txt");
                 line = sr.ReadLine();
                 while (line != null)
                 {
