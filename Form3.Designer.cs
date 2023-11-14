@@ -165,6 +165,7 @@ namespace TrabajoIntegrador
             this.Controls.Add(this.label3);
             this.Name = "FormRegistro";
             this.Text = "Form3";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormRegistro_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

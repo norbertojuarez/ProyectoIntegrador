@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TrabajoIntegrador
+
 {
     static class Program
     {
@@ -20,8 +21,10 @@ namespace TrabajoIntegrador
             Application.Run(new FormLogin());
 
         }
-    }
 
+
+
+    }
     public class Usuario
     {
         public int id;
@@ -32,7 +35,7 @@ namespace TrabajoIntegrador
         {
             this.id = id;
             this.nombre = nombre;
-            this.contrasenia = contrasenia;                       
+            this.contrasenia = contrasenia;
         }
 
         public override string ToString()
@@ -41,5 +44,7 @@ namespace TrabajoIntegrador
         }
     }
 
-    
+ 
+
+   
 }

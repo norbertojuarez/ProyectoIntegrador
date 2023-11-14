@@ -19,7 +19,8 @@ namespace TrabajoIntegrador
             InitializeComponent();
             this.formularioLogin = login;
         }
-
+       
+        
       
         private void btnLoginIngresar_Click(object sender, EventArgs e)
         {          
@@ -54,6 +55,12 @@ namespace TrabajoIntegrador
         }
 
         private void btnRegistroAceptar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            formularioLogin.Show();
+        }
+
+        private void FormRegistro_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.Hide();
             formularioLogin.Show();
