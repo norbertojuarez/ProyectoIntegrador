@@ -19,9 +19,7 @@ namespace TrabajoIntegrador
             InitializeComponent();
             this.formularioLogin = login;
         }
-       
-        
-      
+              
         private void btnLoginIngresar_Click(object sender, EventArgs e)
         {          
 

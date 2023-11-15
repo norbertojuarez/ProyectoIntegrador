@@ -12,17 +12,15 @@ using System.Windows.Forms;
 namespace TrabajoIntegrador
 {
     public partial class FormLogin : Form
-    {
-        public FormLogin()
+    {        public FormLogin()
         {
             InitializeComponent();
-        }
-             
+        }     
 
         //evento para validar usuario y contraseña
         private void btnLoginIngresar_Click(object sender, EventArgs e)
         {
-            //capturar usuario y contraseña ingresada
+            //capturar usuario y contraseña ingresada en un string
             string usuarioingresado = "Usuario: " + textBoxLoginUsuario.Text + " Contraseña: " + textBoxLoginContrasenia.Text;
             
             //validar usuario y contraseña
