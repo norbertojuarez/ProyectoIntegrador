@@ -31,18 +31,18 @@ namespace TrabajoIntegrador
         {
             this.labelMenuBienvenida = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelFiltros = new System.Windows.Forms.Label();
+            this.comboBoxAutores = new System.Windows.Forms.ComboBox();
+            this.groupBoxGenero = new System.Windows.Forms.GroupBox();
+            this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.btnMenuLeidos = new System.Windows.Forms.Button();
             this.btnMenuUltimos = new System.Windows.Forms.Button();
             this.btnMenuCatalogo = new System.Windows.Forms.Button();
             this.panelLibros = new System.Windows.Forms.Panel();
-            this.groupBoxGenero = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.comboBoxAutores = new System.Windows.Forms.ComboBox();
-            this.labelFiltros = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBoxGenero.SuspendLayout();
             this.SuspendLayout();
@@ -73,6 +73,103 @@ namespace TrabajoIntegrador
             this.panel1.Size = new System.Drawing.Size(267, 450);
             this.panel1.TabIndex = 1;
             // 
+            // labelFiltros
+            // 
+            this.labelFiltros.AutoSize = true;
+            this.labelFiltros.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFiltros.ForeColor = System.Drawing.Color.White;
+            this.labelFiltros.Location = new System.Drawing.Point(9, 214);
+            this.labelFiltros.Name = "labelFiltros";
+            this.labelFiltros.Size = new System.Drawing.Size(52, 18);
+            this.labelFiltros.TabIndex = 3;
+            this.labelFiltros.Text = "Filtrar";
+            // 
+            // comboBoxAutores
+            // 
+            this.comboBoxAutores.FormattingEnabled = true;
+            this.comboBoxAutores.Location = new System.Drawing.Point(19, 396);
+            this.comboBoxAutores.Name = "comboBoxAutores";
+            this.comboBoxAutores.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxAutores.TabIndex = 13;
+            this.comboBoxAutores.Text = "Autores";
+            this.comboBoxAutores.SelectedIndexChanged += new System.EventHandler(this.comboBoxAutores_SelectedIndexChanged);
+            // 
+            // groupBoxGenero
+            // 
+            this.groupBoxGenero.Controls.Add(this.radioButton5);
+            this.groupBoxGenero.Controls.Add(this.radioButton4);
+            this.groupBoxGenero.Controls.Add(this.radioButton3);
+            this.groupBoxGenero.Controls.Add(this.radioButton2);
+            this.groupBoxGenero.Controls.Add(this.radioButton1);
+            this.groupBoxGenero.ForeColor = System.Drawing.Color.White;
+            this.groupBoxGenero.Location = new System.Drawing.Point(12, 238);
+            this.groupBoxGenero.Name = "groupBoxGenero";
+            this.groupBoxGenero.Size = new System.Drawing.Size(252, 139);
+            this.groupBoxGenero.TabIndex = 12;
+            this.groupBoxGenero.TabStop = false;
+            this.groupBoxGenero.Text = "Género";
+            this.groupBoxGenero.Enter += new System.EventHandler(this.groupBoxGenero_Enter);
+            // 
+            // radioButton5
+            // 
+            this.radioButton5.AutoSize = true;
+            this.radioButton5.Location = new System.Drawing.Point(7, 112);
+            this.radioButton5.Name = "radioButton5";
+            this.radioButton5.Size = new System.Drawing.Size(89, 17);
+            this.radioButton5.TabIndex = 4;
+            this.radioButton5.TabStop = true;
+            this.radioButton5.Text = "programación";
+            this.radioButton5.UseVisualStyleBackColor = true;
+            this.radioButton5.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // radioButton4
+            // 
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Location = new System.Drawing.Point(7, 89);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(55, 17);
+            this.radioButton4.TabIndex = 3;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.Text = "infantil";
+            this.radioButton4.UseVisualStyleBackColor = true;
+            this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(7, 66);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(51, 17);
+            this.radioButton3.TabIndex = 2;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "relato";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(7, 43);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(93, 17);
+            this.radioButton2.TabIndex = 1;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "ciencia ficcion";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(7, 20);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(57, 17);
+            this.radioButton1.TabIndex = 0;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "novela";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
             // btnMenuLeidos
             // 
             this.btnMenuLeidos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(129)))), ((int)(((byte)(84)))));
@@ -83,6 +180,7 @@ namespace TrabajoIntegrador
             this.btnMenuLeidos.TabIndex = 9;
             this.btnMenuLeidos.Text = "MAS LEIDOS";
             this.btnMenuLeidos.UseVisualStyleBackColor = false;
+            this.btnMenuLeidos.Click += new System.EventHandler(this.btnMenuLeidos_Click);
             // 
             // btnMenuUltimos
             // 
@@ -110,110 +208,17 @@ namespace TrabajoIntegrador
             // 
             // panelLibros
             // 
+            this.panelLibros.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelLibros.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelLibros.Location = new System.Drawing.Point(302, 51);
             this.panelLibros.Margin = new System.Windows.Forms.Padding(30, 3, 3, 3);
+            this.panelLibros.MinimumSize = new System.Drawing.Size(486, 387);
             this.panelLibros.Name = "panelLibros";
             this.panelLibros.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.panelLibros.Size = new System.Drawing.Size(486, 387);
             this.panelLibros.TabIndex = 2;
-            // 
-            // groupBoxGenero
-            // 
-            this.groupBoxGenero.Controls.Add(this.radioButton5);
-            this.groupBoxGenero.Controls.Add(this.radioButton4);
-            this.groupBoxGenero.Controls.Add(this.radioButton3);
-            this.groupBoxGenero.Controls.Add(this.radioButton2);
-            this.groupBoxGenero.Controls.Add(this.radioButton1);
-            this.groupBoxGenero.ForeColor = System.Drawing.Color.White;
-            this.groupBoxGenero.Location = new System.Drawing.Point(12, 238);
-            this.groupBoxGenero.Name = "groupBoxGenero";
-            this.groupBoxGenero.Size = new System.Drawing.Size(252, 139);
-            this.groupBoxGenero.TabIndex = 12;
-            this.groupBoxGenero.TabStop = false;
-            this.groupBoxGenero.Text = "Género";
-            this.groupBoxGenero.Enter += new System.EventHandler(this.groupBoxGenero_Enter);
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(7, 20);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(57, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "novela";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(7, 43);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(93, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "ciencia ficcion";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(7, 66);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(51, 17);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "relato";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            // 
-            // radioButton4
-            // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(7, 89);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(55, 17);
-            this.radioButton4.TabIndex = 3;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "infantil";
-            this.radioButton4.UseVisualStyleBackColor = true;
-            this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            // 
-            // radioButton5
-            // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(7, 112);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(89, 17);
-            this.radioButton5.TabIndex = 4;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "programación";
-            this.radioButton5.UseVisualStyleBackColor = true;
-            this.radioButton5.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            // 
-            // comboBoxAutores
-            // 
-            this.comboBoxAutores.FormattingEnabled = true;
-            this.comboBoxAutores.Location = new System.Drawing.Point(19, 396);
-            this.comboBoxAutores.Name = "comboBoxAutores";
-            this.comboBoxAutores.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxAutores.TabIndex = 13;
-            this.comboBoxAutores.Text = "Autores";
-            this.comboBoxAutores.SelectedIndexChanged += new System.EventHandler(this.comboBoxAutores_SelectedIndexChanged);
-            // 
-            // labelFiltros
-            // 
-            this.labelFiltros.AutoSize = true;
-            this.labelFiltros.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFiltros.ForeColor = System.Drawing.Color.White;
-            this.labelFiltros.Location = new System.Drawing.Point(9, 214);
-            this.labelFiltros.Name = "labelFiltros";
-            this.labelFiltros.Size = new System.Drawing.Size(52, 18);
-            this.labelFiltros.TabIndex = 3;
-            this.labelFiltros.Text = "Filtrar";
             // 
             // FormMenu
             // 
@@ -224,8 +229,11 @@ namespace TrabajoIntegrador
             this.Controls.Add(this.panelLibros);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.labelMenuBienvenida);
+            this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "FormMenu";
             this.Text = "Form2";
+            this.ResizeEnd += new System.EventHandler(this.FormMenu_ResizeEnd);
+            this.Resize += new System.EventHandler(this.FormMenu_Resize);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBoxGenero.ResumeLayout(false);

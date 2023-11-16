@@ -30,7 +30,8 @@ namespace TrabajoIntegrador
             public string rutaPdf;
             public string categoria;
             public DateTime fecha;
-            public Libro(int id, string titulo, string autor, string rutaImg, string rutaPdf, string categoria, DateTime fecha)
+            public int lecturas;
+            public Libro(int id, string titulo, string autor, string rutaImg, string rutaPdf, string categoria, DateTime fecha, int lecturas)
             {
                 this.id = id;
                 this.titulo = titulo;
@@ -39,40 +40,42 @@ namespace TrabajoIntegrador
                 this.rutaPdf = rutaPdf;
                 this.categoria = categoria;
                 this.fecha = fecha;
+                this.lecturas = lecturas;
             }
 
         }
 
         //Crear lista de libros
         List<Libro> listaLibros = new List<Libro>();
+        List<Libro> listaActual = new List<Libro>();
 
         List<Libro> CrearLista()
         {
             
 
             //Crear los objetos libro
-            Libro libro1 = new Libro(1, "Harry Potter y la piedra filosofal", "J.K. Rowling", "Image/harry_potter.jpg", "Pdf/harry_potter_piedra_filosofal.pdf", "novela", new DateTime(2023, 2, 22));
-            Libro libro2 = new Libro(2, "1984", "George Orwell", "Image/1984.jpg", "Pdf/1984.pdf", "novela", new DateTime(2014, 12, 20));
-            Libro libro3 = new Libro(3, "Crónicas marcianas", "Ray Bradbury", "Image/cronicas_marcianas.jpg", "Pdf/cronicas_marcianas.pdf", "relato", new DateTime(2013, 6, 29));
-            Libro libro4 = new Libro(4, "Don Quijote de la Mancha", "Miguel de Cervantes", "Image/don_quijote.jpg", "Pdf/don_quijote.pdf" , "novela", new DateTime(2023, 2, 2));
-            Libro libro5 = new Libro(5, "El Hobbit", "J.R.R. Tolkien", "Image/el_hobbit.jpg", "Pdf/el_hobbit.pdf", "novela", new DateTime(2002, 4, 12));
-            Libro libro6 = new Libro(6, "Crimen y castigo", "Fyodor Dostoevsky", "Image/crimen_castigo.jpg", "Pdf/crimen_y_castigo.pdf", "ciencia ficcion", new DateTime(2013, 2, 20));
-            Libro libro7 = new Libro(7, "Cien años de soledad", "Gabriel García Márquez", "Image/soledad.jpg", "Pdf/cien_anios_de_soledad.pdf", "ciencia ficcion", new DateTime(2012, 2, 21));
-            Libro libro8 = new Libro(8, "El señor de los anillos", "J.R.R. Tolkien", "Image/senor_anillos.jpg", "Pdf/el_senor_de_los_anillos.pdf", "ciencia ficcion", new DateTime(2000, 2, 20));
-            Libro libro9 = new Libro(9, "El código Da Vinci", "Dan Brown", "Image/codigo_da_vinci.jpg", "Pdf/el_codigo_da_vinci.pdf", "policial", new DateTime(2023, 9, 30));
-            Libro libro10 = new Libro(10, "Los juegos del hambre", "Suzanne Collins", "Image/juegos_del_hambre.jpg", "Pdf/los_juegos_del_hambre.pdf", "ciencia ficcion", new DateTime(2011, 11, 11));
-            Libro libro11 = new Libro(11, "El alquimista", "Paulo Coelho", "Image/el_alquimista.jpg", "Pdf/el_alquimista.pdf", "ciencia ficcion", new DateTime(2022, 2, 22));
-            Libro libro12 = new Libro(1, "Harry Potter y la piedra filosofal", "J.K. Rowling", "Image/harry_potter.jpg", "Pdf/harry_potter_piedra_filosofal.pdf", "ciencia ficcion", new DateTime(2007, 7, 10));
-            Libro libro13 = new Libro(2, "1984", "George Orwell", "Image/1984.jpg", "Pdf/1984.pdf", "ciencia ficcion", new DateTime(2010, 1, 21));
-            Libro libro14= new Libro(3, "Crónicas marcianas", "Ray Bradbury", "Image/cronicas_marcianas.jpg", "Pdf/cronicas_marcianas.pdf", "ciencia ficcion", new DateTime(2000, 1, 18));
-            Libro libro15 = new Libro(4, "Don Quijote de la Mancha", "Miguel de Cervantes", "Image/don_quijote.jpg", "Pdf/don_quijote.pdf", "ciencia ficcion", new DateTime(2023, 2, 19));
-            Libro libro16= new Libro(5, "El Hobbit", "J.R.R. Tolkien", "Image/el_hobbit.jpg", "Pdf/el_hobbit.pdf", "ciencia ficcion", new DateTime(2023, 2, 27));
-            Libro libro17= new Libro(6, "Crimen y castigo", "Fyodor Dostoevsky", "Image/crimen_castigo.jpg", "Pdf/crimen_y_castigo.pdf", "ciencia ficcion", new DateTime(2016, 2, 20));
-            Libro libro18= new Libro(7, "Cien años de soledad", "Gabriel García Márquez", "Image/soledad.jpg", "Pdf/cien_anios_de_soledad.pdf", "ciencia ficcion", new DateTime(2013, 2, 20));
-            Libro libro19= new Libro(8, "El señor de los anillos", "J.R.R. Tolkien", "Image/senor_anillos.jpg", "Pdf/el_senor_de_los_anillos.pdf", "ciencia ficcion", new DateTime(2005, 2, 12));
-            Libro libro20= new Libro(9, "El código Da Vinci", "Dan Brown", "Image/codigo_da_vinci.jpg", "Pdf/el_codigo_da_vinci.pdf", "ciencia ficcion", new DateTime(1999, 2, 20));
-            Libro libro21 = new Libro(10, "Los juegos del hambre", "Suzanne Collins", "Image/juegos_del_hambre.jpg", "Pdf/los_juegos_del_hambre.pdf", "ciencia ficcion", new DateTime(1998, 2, 20));
-            Libro libro22 = new Libro(11, "El alquimista", "Paulo Coelho", "Image/el_alquimista.jpg", "Pdf/el_alquimista.pdf", "ciencia ficcion", new DateTime(2021, 2, 2));
+            Libro libro1 = new Libro(1, "Harry Potter y la piedra filosofal", "J.K. Rowling", "Image/harry_potter.jpg", "Pdf/harry_potter_piedra_filosofal.pdf", "novela", new DateTime(2023, 2, 22), 55);
+            Libro libro2 = new Libro(2, "1984", "George Orwell", "Image/1984.jpg", "Pdf/1984.pdf", "novela", new DateTime(2014, 12, 20),9);
+            Libro libro3 = new Libro(3, "Crónicas marcianas", "Ray Bradbury", "Image/cronicas_marcianas.jpg", "Pdf/cronicas_marcianas.pdf", "relato", new DateTime(2013, 6, 29),1);
+            Libro libro4 = new Libro(4, "Don Quijote de la Mancha", "Miguel de Cervantes", "Image/don_quijote.jpg", "Pdf/don_quijote.pdf" , "novela", new DateTime(2023, 2, 2),90);
+            Libro libro5 = new Libro(5, "El Hobbit", "J.R.R. Tolkien", "Image/el_hobbit.jpg", "Pdf/el_hobbit.pdf", "novela", new DateTime(2002, 4, 12),14);
+            Libro libro6 = new Libro(6, "Crimen y castigo", "Fyodor Dostoevsky", "Image/crimen_castigo.jpg", "Pdf/crimen_y_castigo.pdf", "ciencia ficcion", new DateTime(2013, 2, 20),23);
+            Libro libro7 = new Libro(7, "Cien años de soledad", "Gabriel García Márquez", "Image/soledad.jpg", "Pdf/cien_anios_de_soledad.pdf", "ciencia ficcion", new DateTime(2012, 2, 21),55);
+            Libro libro8 = new Libro(8, "El señor de los anillos", "J.R.R. Tolkien", "Image/senor_anillos.jpg", "Pdf/el_senor_de_los_anillos.pdf", "ciencia ficcion", new DateTime(2000, 2, 20),99);
+            Libro libro9 = new Libro(9, "El código Da Vinci", "Dan Brown", "Image/codigo_da_vinci.jpg", "Pdf/el_codigo_da_vinci.pdf", "policial", new DateTime(2023, 9, 30),7);
+            Libro libro10 = new Libro(10, "Los juegos del hambre", "Suzanne Collins", "Image/juegos_del_hambre.jpg", "Pdf/los_juegos_del_hambre.pdf", "ciencia ficcion", new DateTime(2011, 11, 11),17);
+            Libro libro11 = new Libro(11, "El alquimista", "Paulo Coelho", "Image/el_alquimista.jpg", "Pdf/el_alquimista.pdf", "ciencia ficcion", new DateTime(2022, 2, 22),34);
+            Libro libro12 = new Libro(1, "Harry Potter y la piedra filosofal", "J.K. Rowling", "Image/harry_potter.jpg", "Pdf/harry_potter_piedra_filosofal.pdf", "ciencia ficcion", new DateTime(2007, 7, 10),88);
+            Libro libro13 = new Libro(2, "1984", "George Orwell", "Image/1984.jpg", "Pdf/1984.pdf", "ciencia ficcion", new DateTime(2010, 1, 21),90);
+            Libro libro14= new Libro(3, "Crónicas marcianas", "Ray Bradbury", "Image/cronicas_marcianas.jpg", "Pdf/cronicas_marcianas.pdf", "ciencia ficcion", new DateTime(2000, 1, 18),1);
+            Libro libro15 = new Libro(4, "Don Quijote de la Mancha", "Miguel de Cervantes", "Image/don_quijote.jpg", "Pdf/don_quijote.pdf", "ciencia ficcion", new DateTime(2023, 2, 19),26);
+            Libro libro16= new Libro(5, "El Hobbit", "J.R.R. Tolkien", "Image/el_hobbit.jpg", "Pdf/el_hobbit.pdf", "ciencia ficcion", new DateTime(2023, 2, 27),70);
+            Libro libro17= new Libro(6, "Crimen y castigo", "Fyodor Dostoevsky", "Image/crimen_castigo.jpg", "Pdf/crimen_y_castigo.pdf", "ciencia ficcion", new DateTime(2016, 2, 20),33);
+            Libro libro18= new Libro(7, "Cien años de soledad", "Gabriel García Márquez", "Image/soledad.jpg", "Pdf/cien_anios_de_soledad.pdf", "ciencia ficcion", new DateTime(2013, 2, 20),12);
+            Libro libro19= new Libro(8, "El señor de los anillos", "J.R.R. Tolkien", "Image/senor_anillos.jpg", "Pdf/el_senor_de_los_anillos.pdf", "ciencia ficcion", new DateTime(2005, 2, 12),51);
+            Libro libro20= new Libro(9, "El código Da Vinci", "Dan Brown", "Image/codigo_da_vinci.jpg", "Pdf/el_codigo_da_vinci.pdf", "ciencia ficcion", new DateTime(1999, 2, 20),98);
+            Libro libro21 = new Libro(10, "Los juegos del hambre", "Suzanne Collins", "Image/juegos_del_hambre.jpg", "Pdf/los_juegos_del_hambre.pdf", "ciencia ficcion", new DateTime(1998, 2, 20),2);
+            Libro libro22 = new Libro(11, "El alquimista", "Paulo Coelho", "Image/el_alquimista.jpg", "Pdf/el_alquimista.pdf", "ciencia ficcion", new DateTime(2021, 2, 2),83);
 
             // añadir los libros a la lista
 
@@ -99,6 +102,8 @@ namespace TrabajoIntegrador
             listaLibros.Add(libro21);
             listaLibros.Add(libro22);
 
+            
+
             return listaLibros;
 
         }
@@ -106,15 +111,19 @@ namespace TrabajoIntegrador
 
         void MostrarLibros(List<Libro> listaLibros)
         {
+            panelLibros.Controls.Clear();
+            
+
             // Definimos las propiedades del PictureBox
-            int anchoPictureBox = 65; 
-            int altoPictureBox = 110;  
-            int columnas = 6;
+            int anchoPictureBox = 130; 
+            int altoPictureBox = 220;  
+            int columnas = panelLibros.Width / (anchoPictureBox +15);
             int imagen = 0;
 
             //Recorremos la lista de libros
             foreach (var libro in listaLibros)
             {
+
                 PictureBox pictureBox = new PictureBox();
                 pictureBox.Width = anchoPictureBox;
                 pictureBox.Height = altoPictureBox;
@@ -147,6 +156,8 @@ namespace TrabajoIntegrador
             }
             panelLibros.Padding = new Padding(10, 0, 0, 0);
             panelLibros.AutoScroll = true;
+
+            listaActual = listaLibros;
         }
         private void MostrarLibrosGenero(List<Libro> listaLibros, string genero)
         {
@@ -158,6 +169,8 @@ namespace TrabajoIntegrador
                     listaLibrosGenero.Add(libro);
                 }
             }
+
+            listaActual = listaLibrosGenero;
             MostrarLibros(listaLibrosGenero);
                 
         }
@@ -171,15 +184,29 @@ namespace TrabajoIntegrador
                     listaLibrosAutor.Add(libro);
                 }
             }
+            listaActual = listaLibrosAutor;
             MostrarLibros(listaLibrosAutor);
 
         }
 
-        private List<Libro> OrdenarLibros(List<Libro> listaLibros)
+        private void MostrarLibrosPorFecha(List<Libro> listaLibros)
         {
             List<Libro> librosOrdenadosPorFecha = listaLibros.OrderByDescending(libro => libro.fecha).ToList();
             List<Libro> losCincoMasRecientes = librosOrdenadosPorFecha.Take(5).ToList();
-            return losCincoMasRecientes;
+
+            listaActual = losCincoMasRecientes;
+            MostrarLibros(losCincoMasRecientes);
+           
+        }
+
+        private void MostrarLibrosPorLecturas(List<Libro> listaLibros)
+        {
+           
+            List<Libro> librosOrdenadosPorLecturas = listaLibros.OrderByDescending(libro => libro.lecturas).ToList();
+            List<Libro> losCincoMasLeidos = librosOrdenadosPorLecturas.Take(5).ToList();
+
+            listaActual = losCincoMasLeidos;
+             MostrarLibros(losCincoMasLeidos);
         }
 
         private void CargarAutores()
@@ -255,7 +282,7 @@ namespace TrabajoIntegrador
             if (sender is RadioButton radioButton && radioButton.Checked)
             {
                 LimpiarCombobox();
-                panelLibros.Controls.Clear();
+               // panelLibros.Controls.Clear();
                 
                 // Obtener el género del texto del RadioButton en minusculas
                 string generoSeleccionado = radioButton.Text.ToLower(); 
@@ -271,16 +298,13 @@ namespace TrabajoIntegrador
 
             if (comboBoxAutores.Text != "Autores")
             {
-                // Limpiar el panel antes de mostrar los libros del autor seleccionado
-                 panelLibros.Controls.Clear();
-
+                
                 MostrarLibrosAutor(listaLibros, autorSeleccionado);
                 LimpiarRadioButtons();
                 
             }
             else
             {
-                panelLibros.Controls.Clear();
                 MostrarLibros(listaLibros);
                 LimpiarRadioButtons();
             }
@@ -293,7 +317,6 @@ namespace TrabajoIntegrador
 
         private void btnMenuCatalogo_Click(object sender, EventArgs e)
         {
-            panelLibros.Controls.Clear();
             LimpiarCombobox();
             LimpiarRadioButtons();
             MostrarLibros(listaLibros);
@@ -301,10 +324,36 @@ namespace TrabajoIntegrador
 
         private void btnMenuUltimos_Click(object sender, EventArgs e)
         {
-            panelLibros.Controls.Clear();
             LimpiarCombobox();
             LimpiarRadioButtons();
-            MostrarLibros(OrdenarLibros(listaLibros));
+            MostrarLibrosPorFecha(listaLibros);
+        }
+
+        private void btnMenuLeidos_Click(object sender, EventArgs e)
+        {
+            LimpiarCombobox();
+            LimpiarRadioButtons();
+            MostrarLibrosPorLecturas(listaLibros);
+        }
+
+        private void FormMenu_ResizeEnd(object sender, EventArgs e)
+        {
+                       
+             MostrarLibros(listaActual);
+                                 
+        }
+
+       
+        private void FormMenu_Resize(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Maximized)
+            {
+               
+                MostrarLibros(listaActual);
+
+            }
+            
+
         }
     }
 }
