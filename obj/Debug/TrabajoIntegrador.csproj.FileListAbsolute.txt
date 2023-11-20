@@ -22,3 +22,4 @@ C:\Users\Norberto\Documents\Desarrollo de Software\DOO\ProyectoIntegrador\obj\De
 C:\Users\Norberto\Documents\Desarrollo de Software\DOO\ProyectoIntegrador\obj\Debug\TrabajoIntegrador.Properties.Resources.resources
 C:\Users\Norberto\Documents\Desarrollo de Software\DOO\ProyectoIntegrador\obj\Debug\TrabajoIntegrador.csproj.GenerateResource.cache
 C:\Users\Norberto\Documents\Desarrollo de Software\DOO\ProyectoIntegrador\obj\Debug\TrabajoIntegrador.csproj.CoreCompileInputs.cache
+C:\Users\Norberto\Documents\Desarrollo de Software\DOO\ProyectoIntegrador\obj\Debug\TrabajoIntegrador.FormAdministrador.resources

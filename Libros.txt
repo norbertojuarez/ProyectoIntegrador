@@ -1,0 +1,46 @@
+1;Cien años de soledad;Gabriel Garcia Márquez;Image/soledad.jpg;Pdf/cien_anios_de_soledad.pdf;novela;21/02/2012 0:00:00;55
+2;Matar un ruiseñor;Harper Lee;Image/Matar a un ruiseñor.jpg;Pdf/Matar Un Ruiseñor.pdf;novela;22/03/2015 0:00:00;33
+3;Don Quijote de la Mancha;Miguel de Cervantes;Image/don_quijote.jpg;Pdf/don_quijote.pdf;novela;02/02/2023 0:00:00;90
+4;Orgullo y prejuicio;Jane Austen;Image/Orgullo y prejuicio.jpg;Pdf/Orgullo y prejuicio.pdf;novela;15/06/2000 0:00:00;66
+5;Cronica de una muerte anunciada;Gabriel Garcia Marquez;Image/Cronica_de_una_muerte_anunciada.jpg;Pdf/Cronica_de_una_muerte_anunciada.pdf;novela;04/05/1954 0:00:00;77
+6;Rayuela;Julio Cortazar;Image/Rayuela.jpg;Pdf/Rayuela.Pdf;novela;12/12/2012 0:00:00;22
+7;El retrato de Dorian Grey;Oscar Wilde;Image/el_retrato_de_dorian_grey.jpg;Pdf/el_retrato_de_dorian_grey.pdf;novela;14/01/2001 0:00:00;6
+8;El amor en tiempos del colera;Gabriel Garcia Marquez;Image/El amor en tiempos del colera.jpg;Pdf/El amor en tiempos del colera.pdf;novela;19/09/2003 0:00:00;2
+9;El código Da Vinci;Dan Brown;Image/codigo_da_vinci.jpg;Pdf/el_codigo_da_vinci.pdf;policial;30/09/2023 0:00:00;7
+10;La ciudad y los perros;Mario Vargas Llosa;Image/La ciudad y los perros Vargas LLosa.jpg;pdf/La ciudad y los perros Vargas LLosa.pdf;novela;13/04/2021 0:00:00;54
+11;El guardian entre el centeno;J.D. Salinger;Image/El guardian entre el centeno.jpg;El guardian entre el centeno.pdf;novela;26/09/2006 0:00:00;20
+12;La sombra del viento;Carlos Ruiz Zafon;Image/La-Sombra-Del-Viento.jpg;Pdf/La-Sombra-Del-Viento.pdf;novela;31/01/2010 0:00:00;15
+13;El cuaderno dorado;Doris Lessing;Image/El cuaderno dorado.jpg;Pdf/El cuaderno dorado.pdf;novela;10/09/2020 0:00:00;7
+14;La hoguera de las vanidades;Tom Wolfe;Image/La hoguera de las vanidades.jpg;Pdf/La hoguera de las vanidades.pdf;novela;05/10/2017 0:00:00;63
+15;El señor de los anillos;J.R.R. Tolkien;Image/senor_anillos.jpg;Pdf/el_senor_de_los_anillos.pdf;fantasia/c. ficcion;20/02/2000 0:00:00;99
+16;Harry Potter y la piedra filosofal;J.K. Rowling;Image/harry_potter.jpg;Pdf/harry_potter_piedra_filosofal.pdf;fantasia/c. ficcion;22/02/2023 0:00:00;55
+17;El Hobbit;J.R.R. Tolkien;Image/el_hobbit.jpg;Pdf/el_hobbit.pdf;fantasia/c. ficcion;27/02/2023 0:00:00;70
+18;Las cronicas de Narnia;C.S Lewis;Image/las-cronicas-de-narnia-version-completa.jpg;Pdf/las-cronicas-de-narnia-version-completa.pdf;fantasia/c. ficcion;22/10/2006 0:00:00;77
+19;1984;George Orwell;Image/1984.jpg;Pdf/1984.pdf;fantasia/c. ficcion;20/12/2014 0:00:00;9
+20;Aprendizaje C sharp;Rip tutorial;Image/csharp.jpg;Pdf/csharp.pdf;programacion;19/11/2023 0:00:00;3
+21;El juego de Ender;Orson Scott Card;Image/El juego de Ender.jpg;Pdf/El juego de Ender.pdf;fantasia/c. ficcion;10/04/1986 0:00:00;2
+22;El perfume;Patrick Suskind;Image/El perfume.jpg;Pdf/El perfume.pdf;fantasia/c. ficcion;30/05/2018 0:00:00;6
+23;Matadero cinco;Kurt Vonnegut;Image/Matadero cinco.jpg;Pdf/Matadero cinco.pdf;fantasia/c. ficcion;12/01/2015 0:00:00;5
+24;El cuento de la criada;Margaret Atwood;Image/El Cuento De La Criada.jpg;Pdf/El Cuento De La Criada.pdf;fantasia/c. ficcion;14/03/2004 0:00:00;44
+25;El principito;Antoine de Saint-Exupery;Image/el_principito.jpg;Pdf/el_principito.pdf;clasico;11/12/2005 0:00:00;23
+26;Dracula;Bram Stoker;Image/dracula.jpg;Pdf/dracula.pdf;clasico;19/11/1976 0:00:00;12
+27;Las aventuras de Huckleberry Finn;Mark Twain;Image/Las aventuras de Huckleberry Finn.jpg;Pdf/Las aventuras de Huckleberry Finn.pdf;clasico;08/11/2003 0:00:00;43
+28;La odisea;Homero;Image/La odisea.jpg;Pdf/La odisea.pdf;clasico;18/06/2020 0:00:00;23
+29;La iliada;Homero;Image/La iliada.jpg;Pdf/La iliada.pdf;clasico;27/02/2016 0:00:00;26
+30;El extranjero;Albert Camus;Image/el-extranjero.jpg;Pdf/el-extranjero.pdf;clasico;13/05/2019 0:00:00;33
+31;El gran Gatsby;F.Scott Fitzgerald;Image/El gran Gatsby.jpg;Pdf/El gran Gatsby.pdf;drama;20/07/2012 0:00:00;11
+32;Los miserables;Victor Hugo;Image/Los miserables.jpg;Pdf/Los miserables.pdf;drama;09/09/2022 0:00:00;72
+33;El paciente ingles;Michael Ondaatje;Image/El paciente ingles.jpg;Pdf/El paciente ingles.pdf;drama;10/04/2002 0:00:00;38
+34;Moby Dick;Herman Melvilee;Image/moby_dick.jpg;Pdf/moby_dick.pdf;aventura;15/08/1999 0:00:00;56
+35;El viejo y el mar;Ernest Hemingway;Image/El viejo y el mar.jpg;Pdf/El viejo y el mar.pdf;aventura;23/02/2012 0:00:00;38
+36;Siddhartha;Hermann Hesse;Image/Siddhartha.jpg;Pdf/Siddhartha.pdf;espiritualidad;14/11/2002 0:00:00;42
+37;El alquimista;Paulo Coelho;Image/el_alquimista.jpg;Pdf/el_alquimista.pdf;espiritualidad;22/02/2022 0:00:00;34
+38;Las enseñanzas de Don Juan;Carlos Castaneda;Image/Las-enseñanzas-de-Don-Juan.jpg;Pdf/Las-enseñanzas-de-Don-Juan.pdf;espiritualidad;04/06/2000 0:00:00;22
+39;El libro de la selva;Rudyard Kipling;Image/El-libro-de-la-selva.jpg;Pdf/El-libro-de-la-selva.pdf;infantil;13/12/2008 0:00:00;7
+40;El señor de las moscas;William Golding;Image/El señor de las moscas.jpg;Pdf/El señor de las moscas.pdf;infantil;10/01/2006 0:00:00;70
+41;Crónicas marcianas;Ray Bradbury;Image/cronicas_marcianas.jpg;Pdf/cronicas_marcianas.pdf;fantasia/c. ficcion;29/06/2013 0:00:00;1
+42;Crimen y castigo;Fyodor Dostoevsky;Image/crimen_castigo.jpg;Pdf/crimen_y_castigo.pdf;novela;20/02/2013 0:00:00;23
+43;Los juegos del hambre;Suzanne Collins;Image/juegos_del_hambre.jpg;Pdf/los_juegos_del_hambre.pdf;fantasia/c. ficcion;11/11/2011 0:00:00;17
+44;React Notes;Majo Ledesma;Image/react_apunte.jpg;Pdf/react_notes.pdf;programacion;02/02/2021 0:00:00;83
+45;El resplandor;Stephen King;Image/El_resplandor.jpg;Pdf/El_resplandor.pdf;terror;19/11/2023 0:00:00;2
+

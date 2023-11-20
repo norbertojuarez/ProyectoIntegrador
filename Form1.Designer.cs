@@ -83,7 +83,7 @@ namespace TrabajoIntegrador
             this.btnRegistro.TabIndex = 6;
             this.btnRegistro.Text = "ASOCIATE";
             this.btnRegistro.UseVisualStyleBackColor = false;
-            this.btnRegistro.Click += new System.EventHandler(this.button1_Click);
+            this.btnRegistro.Click += new System.EventHandler(this.Button1_Click);
             // 
             // labelLoginIFTS
             // 
@@ -184,7 +184,7 @@ namespace TrabajoIntegrador
             this.btnLoginIngresar.TabIndex = 5;
             this.btnLoginIngresar.Text = "INGRESAR";
             this.btnLoginIngresar.UseVisualStyleBackColor = false;
-            this.btnLoginIngresar.Click += new System.EventHandler(this.btnLoginIngresar_Click);
+            this.btnLoginIngresar.Click += new System.EventHandler(this.BtnLoginIngresar_Click);
             // 
             // labelLoginCerrar
             // 
@@ -196,7 +196,7 @@ namespace TrabajoIntegrador
             this.labelLoginCerrar.Size = new System.Drawing.Size(19, 18);
             this.labelLoginCerrar.TabIndex = 6;
             this.labelLoginCerrar.Text = "X";
-            this.labelLoginCerrar.Click += new System.EventHandler(this.labelLoginCerrar_Click);
+            this.labelLoginCerrar.Click += new System.EventHandler(this.LabelLoginCerrar_Click);
             // 
             // labelLoginError
             // 

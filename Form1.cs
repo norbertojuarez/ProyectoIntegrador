@@ -18,7 +18,7 @@ namespace TrabajoIntegrador
         }     
 
         //evento para validar usuario y contraseña
-        private void btnLoginIngresar_Click(object sender, EventArgs e)
+        private void BtnLoginIngresar_Click(object sender, EventArgs e)
         {
             //capturar usuario y contraseña ingresada en un string
             string usuarioingresado = "Usuario: " + textBoxLoginUsuario.Text + " Contraseña: " + textBoxLoginContrasenia.Text;
@@ -36,7 +36,7 @@ namespace TrabajoIntegrador
                     string linea = line.ToString();
                     if (linea.Contains(usuarioingresado))
                     {
-                        FormMenu miMenu = new FormMenu(textBoxLoginUsuario.Text);
+                        FormMenu miMenu = new FormMenu(textBoxLoginUsuario.Text, this);
 
                         this.Hide();
                         miMenu.Show();
@@ -80,7 +80,7 @@ namespace TrabajoIntegrador
         }
 
         //evento para registrar usuarios nuevos
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             FormRegistro formRegistro = new FormRegistro(this);
             labelLoginError.Text = "";
@@ -90,7 +90,7 @@ namespace TrabajoIntegrador
             this.Hide();
 
         }
-        private void labelLoginCerrar_Click(object sender, EventArgs e)
+        private void LabelLoginCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
         }

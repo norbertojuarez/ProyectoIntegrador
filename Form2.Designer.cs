@@ -29,11 +29,19 @@ namespace TrabajoIntegrador
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
             this.labelMenuBienvenida = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.iconoLibro2 = new System.Windows.Forms.PictureBox();
+            this.iconoLibro = new System.Windows.Forms.PictureBox();
             this.labelFiltros = new System.Windows.Forms.Label();
             this.comboBoxAutores = new System.Windows.Forms.ComboBox();
             this.groupBoxGenero = new System.Windows.Forms.GroupBox();
+            this.radioButton10 = new System.Windows.Forms.RadioButton();
+            this.radioButton9 = new System.Windows.Forms.RadioButton();
+            this.radioButton8 = new System.Windows.Forms.RadioButton();
+            this.radioButton7 = new System.Windows.Forms.RadioButton();
+            this.radioButton6 = new System.Windows.Forms.RadioButton();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
@@ -44,6 +52,8 @@ namespace TrabajoIntegrador
             this.btnMenuCatalogo = new System.Windows.Forms.Button();
             this.panelLibros = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconoLibro2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconoLibro)).BeginInit();
             this.groupBoxGenero.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,6 +70,8 @@ namespace TrabajoIntegrador
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(129)))), ((int)(((byte)(84)))));
+            this.panel1.Controls.Add(this.iconoLibro2);
+            this.panel1.Controls.Add(this.iconoLibro);
             this.panel1.Controls.Add(this.labelFiltros);
             this.panel1.Controls.Add(this.comboBoxAutores);
             this.panel1.Controls.Add(this.groupBoxGenero);
@@ -70,8 +82,33 @@ namespace TrabajoIntegrador
             this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(267, 450);
+            this.panel1.Size = new System.Drawing.Size(267, 541);
             this.panel1.TabIndex = 1;
+            // 
+            // iconoLibro2
+            // 
+            this.iconoLibro2.Image = ((System.Drawing.Image)(resources.GetObject("iconoLibro2.Image")));
+            this.iconoLibro2.Location = new System.Drawing.Point(3, 3);
+            this.iconoLibro2.Name = "iconoLibro2";
+            this.iconoLibro2.Size = new System.Drawing.Size(44, 43);
+            this.iconoLibro2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.iconoLibro2.TabIndex = 15;
+            this.iconoLibro2.TabStop = false;
+            this.iconoLibro2.Visible = false;
+            this.iconoLibro2.Click += new System.EventHandler(this.iconoLibro2_Click);
+            this.iconoLibro2.MouseLeave += new System.EventHandler(this.iconoLibro2_MouseLeave);
+            // 
+            // iconoLibro
+            // 
+            this.iconoLibro.Image = ((System.Drawing.Image)(resources.GetObject("iconoLibro.Image")));
+            this.iconoLibro.Location = new System.Drawing.Point(3, 3);
+            this.iconoLibro.Name = "iconoLibro";
+            this.iconoLibro.Size = new System.Drawing.Size(44, 43);
+            this.iconoLibro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.iconoLibro.TabIndex = 14;
+            this.iconoLibro.TabStop = false;
+            this.iconoLibro.Visible = false;
+            this.iconoLibro.MouseHover += new System.EventHandler(this.iconoLibro_MouseHover);
             // 
             // labelFiltros
             // 
@@ -87,7 +124,7 @@ namespace TrabajoIntegrador
             // comboBoxAutores
             // 
             this.comboBoxAutores.FormattingEnabled = true;
-            this.comboBoxAutores.Location = new System.Drawing.Point(19, 396);
+            this.comboBoxAutores.Location = new System.Drawing.Point(19, 508);
             this.comboBoxAutores.Name = "comboBoxAutores";
             this.comboBoxAutores.Size = new System.Drawing.Size(121, 21);
             this.comboBoxAutores.TabIndex = 13;
@@ -96,6 +133,11 @@ namespace TrabajoIntegrador
             // 
             // groupBoxGenero
             // 
+            this.groupBoxGenero.Controls.Add(this.radioButton10);
+            this.groupBoxGenero.Controls.Add(this.radioButton9);
+            this.groupBoxGenero.Controls.Add(this.radioButton8);
+            this.groupBoxGenero.Controls.Add(this.radioButton7);
+            this.groupBoxGenero.Controls.Add(this.radioButton6);
             this.groupBoxGenero.Controls.Add(this.radioButton5);
             this.groupBoxGenero.Controls.Add(this.radioButton4);
             this.groupBoxGenero.Controls.Add(this.radioButton3);
@@ -104,28 +146,87 @@ namespace TrabajoIntegrador
             this.groupBoxGenero.ForeColor = System.Drawing.Color.White;
             this.groupBoxGenero.Location = new System.Drawing.Point(12, 238);
             this.groupBoxGenero.Name = "groupBoxGenero";
-            this.groupBoxGenero.Size = new System.Drawing.Size(252, 139);
+            this.groupBoxGenero.Size = new System.Drawing.Size(252, 253);
             this.groupBoxGenero.TabIndex = 12;
             this.groupBoxGenero.TabStop = false;
             this.groupBoxGenero.Text = "Género";
-            this.groupBoxGenero.Enter += new System.EventHandler(this.groupBoxGenero_Enter);
+            // 
+            // radioButton10
+            // 
+            this.radioButton10.AutoSize = true;
+            this.radioButton10.Location = new System.Drawing.Point(7, 88);
+            this.radioButton10.Name = "radioButton10";
+            this.radioButton10.Size = new System.Drawing.Size(86, 17);
+            this.radioButton10.TabIndex = 9;
+            this.radioButton10.TabStop = true;
+            this.radioButton10.Text = "espiritualidad";
+            this.radioButton10.UseVisualStyleBackColor = true;
+            this.radioButton10.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // radioButton9
+            // 
+            this.radioButton9.AutoSize = true;
+            this.radioButton9.Location = new System.Drawing.Point(7, 226);
+            this.radioButton9.Name = "radioButton9";
+            this.radioButton9.Size = new System.Drawing.Size(49, 17);
+            this.radioButton9.TabIndex = 8;
+            this.radioButton9.TabStop = true;
+            this.radioButton9.Text = "terror";
+            this.radioButton9.UseVisualStyleBackColor = true;
+            this.radioButton9.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // radioButton8
+            // 
+            this.radioButton8.AutoSize = true;
+            this.radioButton8.Location = new System.Drawing.Point(7, 19);
+            this.radioButton8.Name = "radioButton8";
+            this.radioButton8.Size = new System.Drawing.Size(67, 17);
+            this.radioButton8.TabIndex = 7;
+            this.radioButton8.TabStop = true;
+            this.radioButton8.Text = "aventura";
+            this.radioButton8.UseVisualStyleBackColor = true;
+            this.radioButton8.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // radioButton7
+            // 
+            this.radioButton7.AutoSize = true;
+            this.radioButton7.Location = new System.Drawing.Point(7, 65);
+            this.radioButton7.Name = "radioButton7";
+            this.radioButton7.Size = new System.Drawing.Size(54, 17);
+            this.radioButton7.TabIndex = 6;
+            this.radioButton7.TabStop = true;
+            this.radioButton7.Text = "drama";
+            this.radioButton7.UseVisualStyleBackColor = true;
+            this.radioButton7.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // radioButton6
+            // 
+            this.radioButton6.AutoSize = true;
+            this.radioButton6.Location = new System.Drawing.Point(7, 42);
+            this.radioButton6.Name = "radioButton6";
+            this.radioButton6.Size = new System.Drawing.Size(58, 17);
+            this.radioButton6.TabIndex = 5;
+            this.radioButton6.TabStop = true;
+            this.radioButton6.Text = "clasico";
+            this.radioButton6.UseVisualStyleBackColor = true;
+            this.radioButton6.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // radioButton5
             // 
             this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(7, 112);
+            this.radioButton5.Location = new System.Drawing.Point(7, 203);
             this.radioButton5.Name = "radioButton5";
             this.radioButton5.Size = new System.Drawing.Size(89, 17);
             this.radioButton5.TabIndex = 4;
             this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "programación";
+            this.radioButton5.Text = "programacion";
             this.radioButton5.UseVisualStyleBackColor = true;
             this.radioButton5.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // radioButton4
             // 
             this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(7, 89);
+            this.radioButton4.Location = new System.Drawing.Point(7, 134);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(55, 17);
             this.radioButton4.TabIndex = 3;
@@ -137,31 +238,31 @@ namespace TrabajoIntegrador
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(7, 66);
+            this.radioButton3.Location = new System.Drawing.Point(7, 180);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(51, 17);
+            this.radioButton3.Size = new System.Drawing.Size(57, 17);
             this.radioButton3.TabIndex = 2;
             this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "relato";
+            this.radioButton3.Text = "policial";
             this.radioButton3.UseVisualStyleBackColor = true;
             this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(7, 43);
+            this.radioButton2.Location = new System.Drawing.Point(7, 111);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(93, 17);
+            this.radioButton2.Size = new System.Drawing.Size(110, 17);
             this.radioButton2.TabIndex = 1;
             this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "ciencia ficcion";
+            this.radioButton2.Text = "fantasia/c. ficcion";
             this.radioButton2.UseVisualStyleBackColor = true;
             this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(7, 20);
+            this.radioButton1.Location = new System.Drawing.Point(7, 157);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(57, 17);
             this.radioButton1.TabIndex = 0;
@@ -217,7 +318,7 @@ namespace TrabajoIntegrador
             this.panelLibros.MinimumSize = new System.Drawing.Size(486, 387);
             this.panelLibros.Name = "panelLibros";
             this.panelLibros.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.panelLibros.Size = new System.Drawing.Size(486, 387);
+            this.panelLibros.Size = new System.Drawing.Size(520, 478);
             this.panelLibros.TabIndex = 2;
             // 
             // FormMenu
@@ -225,17 +326,20 @@ namespace TrabajoIntegrador
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(224)))), ((int)(((byte)(187)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(834, 541);
             this.Controls.Add(this.panelLibros);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.labelMenuBienvenida);
-            this.MinimumSize = new System.Drawing.Size(816, 489);
+            this.MinimumSize = new System.Drawing.Size(850, 489);
             this.Name = "FormMenu";
             this.Text = "Form2";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMenu_FormClosing);
             this.ResizeEnd += new System.EventHandler(this.FormMenu_ResizeEnd);
             this.Resize += new System.EventHandler(this.FormMenu_Resize);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconoLibro2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconoLibro)).EndInit();
             this.groupBoxGenero.ResumeLayout(false);
             this.groupBoxGenero.PerformLayout();
             this.ResumeLayout(false);
@@ -259,5 +363,12 @@ namespace TrabajoIntegrador
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.ComboBox comboBoxAutores;
         private System.Windows.Forms.Label labelFiltros;
+        private System.Windows.Forms.PictureBox iconoLibro;
+        private System.Windows.Forms.PictureBox iconoLibro2;
+        private System.Windows.Forms.RadioButton radioButton9;
+        private System.Windows.Forms.RadioButton radioButton8;
+        private System.Windows.Forms.RadioButton radioButton7;
+        private System.Windows.Forms.RadioButton radioButton6;
+        private System.Windows.Forms.RadioButton radioButton10;
     }
 }
