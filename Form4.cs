@@ -18,24 +18,22 @@ namespace TrabajoIntegrador
         {
             InitializeComponent();
             textBoxId.ReadOnly = true;
-            textBoxId.Enabled = false;
-          
+            textBoxId.Enabled = false;          
             this.formMenu = formMenu;
         }
 
         public string rutaCompletaImagen;
         public string rutaCompletaPdf;
         public string nombreImagen;
-        public string nombrePdf;
-        
+        public string nombrePdf;        
 
-        private void SubirLibro(string rutaimagen, string rutapdf)
-        {           
-
+        //METODO PARA SUBIR LIBROS DESDE LOCAL O RED A LA BASE DE DATOS DE LA APP
+        private void SubirLibro()
+        {          
             Console.WriteLine(textBoxImagen.Text);
             Console.WriteLine(textBoxLibro.Text);
-            rutaimagen = "Image/" + textBoxImagen.Text;
-            rutapdf = "Pdf/"+textBoxLibro.Text;
+            string rutaimagen = "Image/" + textBoxImagen.Text;
+            string rutapdf = "Pdf/"+textBoxLibro.Text;
             try
             {
                 File.Copy(rutaCompletaImagen, rutaimagen, false);
@@ -76,15 +74,15 @@ namespace TrabajoIntegrador
             formMenu.listaLibros.Add(nuevoLibro);
             string rutaArchivo = Environment.CurrentDirectory + "\\Libros.txt";
             Console.WriteLine(rutaCompletaImagen);
-            Console.WriteLine(rutaCompletaPdf);           
-
-           
+            Console.WriteLine(rutaCompletaPdf);                      
 
             GuardarListaLibros(formMenu.listaLibros, rutaArchivo);
             MessageBox.Show("Libro cargado con exito");
             this.Close();
 
         }
+
+        //METODO PARA ESCRIBIR LA LISTA ACTUALIZADA DE LIBROS EN LA BASE DE DATOS
         static void GuardarListaLibros(List<FormMenu.Libro> lista, string rutaArchivo)
         {
 
@@ -97,46 +95,38 @@ namespace TrabajoIntegrador
             }
         }  
 
-            private void FormAdministrador_FormClosing(object sender, FormClosingEventArgs e)
+        //EVENTO QUE MUESTRA EL FORMULARIO DEL MENU AL CERRAR ESTE FORMULARIO
+        private void FormAdministrador_FormClosing(object sender, FormClosingEventArgs e)
         {
-            formMenu.Show();
-           
+            formMenu.Show();           
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        //EVENTO PARA CARGAR LA IMAGEN SELECCIONADA DESDE UBICACION LOCAL
+        private void BtnAgregarImagen_click(object sender, EventArgs e)
         {
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)            {
-                
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
                 textBoxImagen.Text = Path.GetFileName(openFileDialog1.FileName);
                 nombreImagen = Path.GetFileName(openFileDialog1.FileName);
-                rutaCompletaImagen = openFileDialog1.FileName;            
-
+                rutaCompletaImagen = openFileDialog1.FileName;
             }
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-    
-
-        private void btnAgregarLibro_Click(object sender, EventArgs e)
-        {
-            string rutaDestinoImagen = Path.Combine(Application.StartupPath, "Image", "Image/" + textBoxImagen.Text);
-            string rutaDestinoPdf = Path.Combine(Application.StartupPath, "Pdf", "Pdf/" + textBoxLibro.Text);
-            SubirLibro(rutaDestinoImagen, rutaDestinoPdf);
-        }
-
-        private void button2_Click(object sender, EventArgs e)
+        //EVENTO PARA CARGAR LOS PDF DESDE UBICACION LOCAL
+        private void BtnAgregarPdf_click(object sender, EventArgs e)
         {
             if (openFileDialog2.ShowDialog() == DialogResult.OK)
             {
                 textBoxLibro.Text = Path.GetFileName(openFileDialog2.FileName);
                 nombrePdf = Path.GetFileName(openFileDialog2.FileName);
                 rutaCompletaPdf = openFileDialog2.FileName;
-
             }
         }
+
+        //EVENTO DEL BOTON AGREGAR LIBRO PARA SUBIR LOS LIBROS CARGADOS
+        private void BtnAgregarLibro_Click(object sender, EventArgs e)
+        {          
+            SubirLibro();
+        }    
     }
 }

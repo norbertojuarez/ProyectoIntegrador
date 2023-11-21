@@ -43,4 +43,3 @@
 43;Los juegos del hambre;Suzanne Collins;Image/juegos_del_hambre.jpg;Pdf/los_juegos_del_hambre.pdf;fantasia/c. ficcion;11/11/2011 0:00:00;17
 44;React Notes;Majo Ledesma;Image/react_apunte.jpg;Pdf/react_notes.pdf;programacion;02/02/2021 0:00:00;83
 45;El resplandor;Stephen King;Image/El_resplandor.jpg;Pdf/El_resplandor.pdf;terror;19/11/2023 0:00:00;2
-

@@ -50,7 +50,7 @@ namespace TrabajoIntegrador
             this.btnRegistroAsociarse.TabIndex = 10;
             this.btnRegistroAsociarse.Text = "ASOCIARSE";
             this.btnRegistroAsociarse.UseVisualStyleBackColor = false;
-            this.btnRegistroAsociarse.Click += new System.EventHandler(this.btnLoginIngresar_Click);
+            this.btnRegistroAsociarse.Click += new System.EventHandler(this.BtnRegistroAsociarse_Click);
             // 
             // textBoxRegistroContrasenia
             // 
@@ -126,7 +126,7 @@ namespace TrabajoIntegrador
             this.btnRegistroAceptar.Text = "ACEPTAR";
             this.btnRegistroAceptar.UseVisualStyleBackColor = false;
             this.btnRegistroAceptar.Visible = false;
-            this.btnRegistroAceptar.Click += new System.EventHandler(this.btnRegistroAceptar_Click);
+            this.btnRegistroAceptar.Click += new System.EventHandler(this.BtnRegistroAceptar_Click);
             // 
             // labelRegistroError
             // 

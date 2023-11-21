@@ -41,11 +41,11 @@ namespace TrabajoIntegrador
             this.textBoxAutor = new System.Windows.Forms.TextBox();
             this.textBoxImagen = new System.Windows.Forms.TextBox();
             this.textBoxLibro = new System.Windows.Forms.TextBox();
-            this.btnAgregarLibro = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnAgregarLibro = new System.Windows.Forms.Button();
+            this.BtnAgregarImagen = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.BtnAgregarPdf = new System.Windows.Forms.Button();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
             this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -148,31 +148,31 @@ namespace TrabajoIntegrador
             this.textBoxLibro.Size = new System.Drawing.Size(438, 20);
             this.textBoxLibro.TabIndex = 14;
             // 
-            // btnAgregarLibro
+            // BtnAgregarLibro
             // 
-            this.btnAgregarLibro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(129)))), ((int)(((byte)(84)))));
-            this.btnAgregarLibro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarLibro.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarLibro.Location = new System.Drawing.Point(671, 346);
-            this.btnAgregarLibro.Name = "btnAgregarLibro";
-            this.btnAgregarLibro.Size = new System.Drawing.Size(110, 35);
-            this.btnAgregarLibro.TabIndex = 16;
-            this.btnAgregarLibro.Text = "AGREGAR";
-            this.btnAgregarLibro.UseVisualStyleBackColor = false;
-            this.btnAgregarLibro.Click += new System.EventHandler(this.btnAgregarLibro_Click);
+            this.BtnAgregarLibro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(129)))), ((int)(((byte)(84)))));
+            this.BtnAgregarLibro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAgregarLibro.ForeColor = System.Drawing.Color.White;
+            this.BtnAgregarLibro.Location = new System.Drawing.Point(671, 346);
+            this.BtnAgregarLibro.Name = "BtnAgregarLibro";
+            this.BtnAgregarLibro.Size = new System.Drawing.Size(110, 35);
+            this.BtnAgregarLibro.TabIndex = 16;
+            this.BtnAgregarLibro.Text = "AGREGAR";
+            this.BtnAgregarLibro.UseVisualStyleBackColor = false;
+            this.BtnAgregarLibro.Click += new System.EventHandler(this.BtnAgregarLibro_Click);
             // 
-            // button1
+            // BtnAgregarImagen
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(753, 222);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(28, 22);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "...";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.BtnAgregarImagen.BackColor = System.Drawing.Color.White;
+            this.BtnAgregarImagen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAgregarImagen.Location = new System.Drawing.Point(753, 222);
+            this.BtnAgregarImagen.Margin = new System.Windows.Forms.Padding(0);
+            this.BtnAgregarImagen.Name = "BtnAgregarImagen";
+            this.BtnAgregarImagen.Size = new System.Drawing.Size(28, 22);
+            this.BtnAgregarImagen.TabIndex = 17;
+            this.BtnAgregarImagen.Text = "...";
+            this.BtnAgregarImagen.UseVisualStyleBackColor = false;
+            this.BtnAgregarImagen.Click += new System.EventHandler(this.BtnAgregarImagen_click);
             // 
             // openFileDialog1
             // 
@@ -191,20 +191,19 @@ namespace TrabajoIntegrador
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 18;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // button2
+            // BtnAgregarPdf
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(753, 264);
-            this.button2.Margin = new System.Windows.Forms.Padding(0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(28, 22);
-            this.button2.TabIndex = 19;
-            this.button2.Text = "...";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.BtnAgregarPdf.BackColor = System.Drawing.Color.White;
+            this.BtnAgregarPdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAgregarPdf.Location = new System.Drawing.Point(753, 264);
+            this.BtnAgregarPdf.Margin = new System.Windows.Forms.Padding(0);
+            this.BtnAgregarPdf.Name = "BtnAgregarPdf";
+            this.BtnAgregarPdf.Size = new System.Drawing.Size(28, 22);
+            this.BtnAgregarPdf.TabIndex = 19;
+            this.BtnAgregarPdf.Text = "...";
+            this.BtnAgregarPdf.UseVisualStyleBackColor = false;
+            this.BtnAgregarPdf.Click += new System.EventHandler(this.BtnAgregarPdf_click);
             // 
             // openFileDialog2
             // 
@@ -228,10 +227,10 @@ namespace TrabajoIntegrador
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(224)))), ((int)(((byte)(187)))));
             this.ClientSize = new System.Drawing.Size(834, 450);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.BtnAgregarPdf);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnAgregarLibro);
+            this.Controls.Add(this.BtnAgregarImagen);
+            this.Controls.Add(this.BtnAgregarLibro);
             this.Controls.Add(this.textBoxLibro);
             this.Controls.Add(this.textBoxImagen);
             this.Controls.Add(this.textBoxAutor);
@@ -266,11 +265,11 @@ namespace TrabajoIntegrador
         private System.Windows.Forms.TextBox textBoxAutor;
         private System.Windows.Forms.TextBox textBoxImagen;
         private System.Windows.Forms.TextBox textBoxLibro;
-        private System.Windows.Forms.Button btnAgregarLibro;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnAgregarLibro;
+        private System.Windows.Forms.Button BtnAgregarImagen;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button BtnAgregarPdf;
         private System.Windows.Forms.OpenFileDialog openFileDialog2;
         private System.Windows.Forms.Label label7;
     }

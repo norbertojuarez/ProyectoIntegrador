@@ -15,8 +15,7 @@ namespace TrabajoIntegrador
 {
     public partial class FormMenu : Form
     {
-        public FormLogin formLogin;
-       
+        public FormLogin formLogin;       
        
         public FormMenu(string bienvenida,FormLogin formLogin)
         {
@@ -27,20 +26,13 @@ namespace TrabajoIntegrador
             labelMenuBienvenida.Text = "Bienvenido a la biblioteca " + bienvenida.ToUpper();
             this.formLogin = formLogin;
         }
-
+               
         
-        //Crear lista de libros
         public List<Libro> listaLibros = new List<Libro>();
         List<Libro> listaActual = new List<Libro>();
         public int identificador;
 
-        private void ValidarAdministrador(string bienvenida)
-        {
-            if(bienvenida == "admin")
-            {
-                iconoLibro.Visible = true;
-            }
-        }
+        //CLASE Y CONSTRUCTOR LIBRO
         public class Libro
         {
             public int id;
@@ -64,10 +56,18 @@ namespace TrabajoIntegrador
             }
         }
 
-
-        public List<Libro> CargarListaLibros()
+        //METODO VALIDAR USUARIO ADMINISTRADOR
+        private void ValidarAdministrador(string bienvenida)
         {
-         
+            if(bienvenida == "Admin")
+            {
+                iconoLibro.Visible = true;
+            }
+        }      
+
+        //METODO CARGAR LISTA DE LIBROS DESDE ARCHIVO
+        public List<Libro> CargarListaLibros()
+        {         
             using (StreamReader reader = new StreamReader(Environment.CurrentDirectory + "\\Libros.txt"))
             {
                 string linea;
@@ -91,33 +91,26 @@ namespace TrabajoIntegrador
                         listaLibros.Add(nuevoLibro);
                         identificador++;
 
-
                     }
                     
                 }
-            }
-            Console.WriteLine(listaLibros.Count());
-            Console.WriteLine(identificador);
+            }     
             return listaLibros;
         }
 
+        //METODO PARA DIBUJAR LIBROS EN PANTALLA
         public void MostrarLibros(List<Libro> listaLibros)
         {
-            panelLibros.Controls.Clear();          
-
-            // Definimos las propiedades del PictureBox
+            panelLibros.Controls.Clear();        
+            // Definimos las propiedades del PictureBox donde se mostraran los libros
             int anchoPictureBox = 130; 
             int altoPictureBox = 220;  
             int columnas = panelLibros.Width / (anchoPictureBox +15);
             int imagen = 0;
-
             //Recorremos la lista de libros
             foreach (var libro in listaLibros)
             {
-
-                PictureBox pictureBox = new PictureBox();
-                pictureBox.Width = anchoPictureBox;
-                pictureBox.Height = altoPictureBox;
+                PictureBox pictureBox = new PictureBox() { Height = altoPictureBox, Width = anchoPictureBox };            
 
                 if (libro.rutaImg.StartsWith("http"))
                 {
@@ -141,17 +134,14 @@ namespace TrabajoIntegrador
                         MessageBox.Show($"Error al cargar la imagen local: {ex.Message}");
                        
                     }
-                }
-               
+                }               
               
                 pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
                 pictureBox.Tag = libro.rutaPdf; // Almacena la ruta del PDF en el Tag del PictureBox
                 pictureBox.Click += PictureBox_Click;
                 pictureBox.MouseHover += PictureBox_MouseHover;
-                TextBox tituloLibro = new TextBox();
-                tituloLibro.Width = anchoPictureBox;
-                tituloLibro.Text = libro.titulo;               
-               
+                pictureBox.MouseLeave += PictureBox_MouseLeave;
+                TextBox tituloLibro = new TextBox() { Width = anchoPictureBox, Text = libro.titulo};                
 
                 // Calcula la posición en función de la fila y columna
                 int fila = imagen / columnas;
@@ -164,8 +154,7 @@ namespace TrabajoIntegrador
 
                 // Agrega el PictureBox al formulario
                 panelLibros.Controls.Add(tituloLibro);
-                panelLibros.Controls.Add(pictureBox);
-              
+                panelLibros.Controls.Add(pictureBox);            
 
                 imagen++;
             }
@@ -174,6 +163,8 @@ namespace TrabajoIntegrador
 
             listaActual = listaLibros;
         }
+
+        //METODO FILTRAR LIBROS POR GENERO
         private void MostrarLibrosGenero(List<Libro> listaLibros, string genero)
         {
             List<Libro> listaLibrosGenero = new List<Libro>();
@@ -184,11 +175,11 @@ namespace TrabajoIntegrador
                     listaLibrosGenero.Add(libro);
                 }
             }
-
             listaActual = listaLibrosGenero;
-            MostrarLibros(listaLibrosGenero);
-                
+            MostrarLibros(listaLibrosGenero);                
         }
+
+        //METODO FILTRAR LIBROS POR AUTOR
         private void MostrarLibrosAutor(List<Libro> listaLibros, string autorseleccionado)
         {
             List<Libro> listaLibrosAutor = new List<Libro>();
@@ -201,19 +192,19 @@ namespace TrabajoIntegrador
             }
             listaActual = listaLibrosAutor;
             MostrarLibros(listaLibrosAutor);
-
         }
 
+        //METODO FILTRAR LOS 10 ULTIMOS LIBROS AGREGADOS
         private void MostrarLibrosPorFecha(List<Libro> listaLibros)
         {
             List<Libro> librosOrdenadosPorFecha = listaLibros.OrderByDescending(libro => libro.fecha).ToList();
             List<Libro> losCincoMasRecientes = librosOrdenadosPorFecha.Take(10).ToList();
 
             listaActual = losCincoMasRecientes;
-            MostrarLibros(losCincoMasRecientes);
-           
+            MostrarLibros(losCincoMasRecientes);           
         }
 
+        //METODO FILTRAR LOS 10 LIBROS MAS LEIDOS
         private void MostrarLibrosPorLecturas(List<Libro> listaLibros)
         {
            
@@ -224,11 +215,11 @@ namespace TrabajoIntegrador
              MostrarLibros(losCincoMasLeidos);
         }
 
+        //METODO CARGAR LOS AUTORES QUE EXISTAN EN LA LISTA EN LOS COMBOBOX
         private void CargarAutores()
         {
             // Crear una lista para almacenar los nombres de los autores únicos
             List<string> autores = new List<string>();
-
             
             // Recorrer la lista de libros para obtener los nombres de los autores únicos
             foreach (Libro libro in listaLibros)
@@ -239,16 +230,14 @@ namespace TrabajoIntegrador
                     autores.Add(libro.autor);
                 }
             }
-
             // Ordenar la lista de autores alfabéticamente
             autores.Sort();
             autores.Insert(0, "Autores");
-
             // Agregar los autores al ComboBox
-            comboBoxAutores.DataSource = autores;
-            
+            comboBoxAutores.DataSource = autores;            
         }
 
+        //METODO PARA LIMPIAR LOS RADIO BUTTONS CUANDO NO SE ENCUENTRAN SELECCIONADOS
         private void LimpiarRadioButtons()
         {
             radioButton1.Checked = false;
@@ -261,19 +250,20 @@ namespace TrabajoIntegrador
             radioButton8.Checked = false;
             radioButton9.Checked = false;
         }
+
+        //METODO PARA LIMPIAR LOS COMBOBOX CUANDO NO SE ENCUENTRAN SELECCIONADOS
         private void LimpiarCombobox()
         {
             comboBoxAutores.SelectedIndex = 0;
         }
-       
-
+        
+        //EVENTO QUE ABRE LOS LIBROS CUANDO HACEMOS CLICK EN CADA IMAGEN DEL LIBRO - Abrirá tanto web como pdf local
         private void PictureBox_Click(object sender, EventArgs e)
         {
             if (sender is PictureBox pictureBox && pictureBox.Tag is string nombreArchivo)
             {
                 if (nombreArchivo.StartsWith("http"))
                 {
-
                     try
                     {
                         Process.Start(nombreArchivo);
@@ -283,7 +273,6 @@ namespace TrabajoIntegrador
                         // Manejar la excepción si no se puede abrir el archivo
                         MessageBox.Show($"Error al abrir el archivo: {ex.Message}");
                     }
-
                 }
                 else
                 {
@@ -299,29 +288,117 @@ namespace TrabajoIntegrador
                         // Manejar la excepción si no se puede abrir el archivo
                         MessageBox.Show($"Error al abrir el archivo: {ex.Message}");
                     }
-
                 }
-                
-                
             }
         }
+
+        //EVENTO HOVER SOBRE LOS LIBROS PARA MOSTRARLOS PRESELECCIONADOS
         private void PictureBox_MouseHover(object sender, EventArgs e)
         {
-            
-        } 
+            if (sender is PictureBox pictureBox)
+            {
+                pictureBox.BorderStyle = BorderStyle.FixedSingle;
+                pictureBox.BackColor = Color.Blue;
+                pictureBox.Width= 120;             
+                pictureBox.Height = 210;
+                pictureBox.Cursor = Cursors.Hand;            
+            }               
+        }
 
+        //EVENTO PARA DEVOLVER PROPIEDADES AL RETIRAR EL MOUSE
+        private void PictureBox_MouseLeave(object sender, EventArgs e)
+        {
+            if (sender is PictureBox pictureBox)
+            {
+                pictureBox.BorderStyle = BorderStyle.None;                
+                pictureBox.Width = 130;
+                pictureBox.Height = 220;
+            }
+        }
 
-        private void comboBoxAutores_SelectedIndexChanged(object sender, EventArgs e)
+        //EVENTO SOBRE BOTON CATALOGO
+        private void BtnMenuCatalogo_Click(object sender, EventArgs e)
+        {
+            LimpiarCombobox();
+            LimpiarRadioButtons();
+            MostrarLibros(listaLibros);
+        }
+
+        //EVENTO SOBRE BOTON ULTIMOS LIBROS CARGADOS
+        private void BtnMenuUltimos_Click(object sender, EventArgs e)
+        {
+            LimpiarCombobox();
+            LimpiarRadioButtons();
+            MostrarLibrosPorFecha(listaLibros);
+        }
+
+        //EVENTO SOBRE BOTON LIBROS MAS LEIDOS
+        private void BtnMenuLeidos_Click(object sender, EventArgs e)
+        {
+            LimpiarCombobox();
+            LimpiarRadioButtons();
+            MostrarLibrosPorLecturas(listaLibros);
+        }
+
+        //EVENTO QUE LLAMA AL METODO MOSTRAR LIBRO CADA VEZ QUE SE TERMINA DE REDIMENCIONAR EL FORMULARIO
+        private void FormMenu_ResizeEnd(object sender, EventArgs e)
+        {                       
+             MostrarLibros(listaActual);                                 
+        }
+
+        //EVENTO QUE LLAMA AL METODO MOSTRAR LIBRO SI SE MAXIMIZA EL FORMULARIO     
+        private void FormMenu_Resize(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Maximized)
+            {               
+                MostrarLibros(listaActual);
+            }
+        }
+
+        //EVENTO QUE "CAMBIA" EL COLOR DEL ICONO AGREGAR LIBRO
+        private void IconoLibro_MouseHover(object sender, EventArgs e)
+        {
+            iconoLibro.Visible = false;
+            iconoLibro2.Visible = true;
+        }
+
+        //EVENTO QUE "REGRESA" EL COLOR AL ICONO AGREGAR LIBRO
+        private void IconoLibro2_MouseLeave(object sender, EventArgs e)
+        {
+            iconoLibro.Visible = true;
+            iconoLibro2.Visible = false;
+        }    
+
+        //EVENTO QUE ABRE FORMULARIO AL HACER CLICK EN EL ICONO AGREGAR LIBRO
+        private void IconoLibro2_Click(object sender, EventArgs e)
+        {
+            FormAdministrador formAdministrador = new FormAdministrador(this);
+            formAdministrador.Show();
+            this.Hide();
+        }
+
+        //EVENTO QUE ACTUALIZA LOS LIBROS CUANDO CAMBIA LA SELECCION DE UN RADIO BUTTON
+        private void RadioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (sender is RadioButton radioButton && radioButton.Checked)
+            {
+                LimpiarCombobox();
+                // Obtener el género del texto del RadioButton en minusculas
+                string generoSeleccionado = radioButton.Text.ToLower();
+                MostrarLibrosGenero(listaLibros, generoSeleccionado);
+            }
+        }
+
+        //EVENTO QUE ACTUALIZA LOS LIBROS QUE SE MUESTRAN CUANDO SE SELECCIONA UN AUTOR
+        private void ComboBoxAutores_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Obtener el autor seleccionado en el ComboBox
-            string autorSeleccionado =  comboBoxAutores.Text;           
+            string autorSeleccionado = comboBoxAutores.Text;
 
             if (comboBoxAutores.Text != "Autores")
             {
-                
                 MostrarLibrosAutor(listaLibros, autorSeleccionado);
                 LimpiarRadioButtons();
-                
             }
             else
             {
@@ -330,87 +407,11 @@ namespace TrabajoIntegrador
             }
         }
 
-       
-
-        private void btnMenuCatalogo_Click(object sender, EventArgs e)
-        {
-            LimpiarCombobox();
-            LimpiarRadioButtons();
-            MostrarLibros(listaLibros);
-        }
-
-        private void btnMenuUltimos_Click(object sender, EventArgs e)
-        {
-            LimpiarCombobox();
-            LimpiarRadioButtons();
-            MostrarLibrosPorFecha(listaLibros);
-        }
-
-        private void btnMenuLeidos_Click(object sender, EventArgs e)
-        {
-            LimpiarCombobox();
-            LimpiarRadioButtons();
-            MostrarLibrosPorLecturas(listaLibros);
-        }
-
-        private void FormMenu_ResizeEnd(object sender, EventArgs e)
-        {
-                       
-             MostrarLibros(listaActual);
-                                 
-        }
-
-       
-        private void FormMenu_Resize(object sender, EventArgs e)
-        {
-            if (WindowState == FormWindowState.Maximized)
-            {
-               
-                MostrarLibros(listaActual);
-
-            }
-            
-
-        }
-
-        private void iconoLibro_MouseHover(object sender, EventArgs e)
-        {
-            iconoLibro.Visible = false;
-            iconoLibro2.Visible = true;
-        }
-
-        private void iconoLibro2_MouseLeave(object sender, EventArgs e)
-        {
-            iconoLibro.Visible = true;
-            iconoLibro2.Visible = false;
-
-        }
-
-        private void iconoLibro2_Click(object sender, EventArgs e)
-        {
-            FormAdministrador formAdministrador = new FormAdministrador(this);
-            formAdministrador.Show();
-            this.Hide();
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            if (sender is RadioButton radioButton && radioButton.Checked)
-            {
-                LimpiarCombobox();
-
-                // Obtener el género del texto del RadioButton en minusculas
-                string generoSeleccionado = radioButton.Text.ToLower();
-                MostrarLibrosGenero(listaLibros, generoSeleccionado);
-
-            }
-        }
-
-    
+        //EVENTO QUE CIERRA LA APP CUANDO SE CIERRA ESTE FORMULARIO
         private void FormMenu_FormClosing(object sender, FormClosingEventArgs e)
         {
             formLogin.Close();
-        }
+        }              
     }
 }
 

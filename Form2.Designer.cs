@@ -88,27 +88,27 @@ namespace TrabajoIntegrador
             // iconoLibro2
             // 
             this.iconoLibro2.Image = ((System.Drawing.Image)(resources.GetObject("iconoLibro2.Image")));
-            this.iconoLibro2.Location = new System.Drawing.Point(3, 3);
+            this.iconoLibro2.Location = new System.Drawing.Point(198, 12);
             this.iconoLibro2.Name = "iconoLibro2";
             this.iconoLibro2.Size = new System.Drawing.Size(44, 43);
             this.iconoLibro2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.iconoLibro2.TabIndex = 15;
             this.iconoLibro2.TabStop = false;
             this.iconoLibro2.Visible = false;
-            this.iconoLibro2.Click += new System.EventHandler(this.iconoLibro2_Click);
-            this.iconoLibro2.MouseLeave += new System.EventHandler(this.iconoLibro2_MouseLeave);
+            this.iconoLibro2.Click += new System.EventHandler(this.IconoLibro2_Click);
+            this.iconoLibro2.MouseLeave += new System.EventHandler(this.IconoLibro2_MouseLeave);
             // 
             // iconoLibro
             // 
             this.iconoLibro.Image = ((System.Drawing.Image)(resources.GetObject("iconoLibro.Image")));
-            this.iconoLibro.Location = new System.Drawing.Point(3, 3);
+            this.iconoLibro.Location = new System.Drawing.Point(198, 12);
             this.iconoLibro.Name = "iconoLibro";
             this.iconoLibro.Size = new System.Drawing.Size(44, 43);
             this.iconoLibro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.iconoLibro.TabIndex = 14;
             this.iconoLibro.TabStop = false;
             this.iconoLibro.Visible = false;
-            this.iconoLibro.MouseHover += new System.EventHandler(this.iconoLibro_MouseHover);
+            this.iconoLibro.MouseHover += new System.EventHandler(this.IconoLibro_MouseHover);
             // 
             // labelFiltros
             // 
@@ -129,7 +129,7 @@ namespace TrabajoIntegrador
             this.comboBoxAutores.Size = new System.Drawing.Size(121, 21);
             this.comboBoxAutores.TabIndex = 13;
             this.comboBoxAutores.Text = "Autores";
-            this.comboBoxAutores.SelectedIndexChanged += new System.EventHandler(this.comboBoxAutores_SelectedIndexChanged);
+            this.comboBoxAutores.SelectedIndexChanged += new System.EventHandler(this.ComboBoxAutores_SelectedIndexChanged);
             // 
             // groupBoxGenero
             // 
@@ -161,7 +161,7 @@ namespace TrabajoIntegrador
             this.radioButton10.TabStop = true;
             this.radioButton10.Text = "espiritualidad";
             this.radioButton10.UseVisualStyleBackColor = true;
-            this.radioButton10.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.radioButton10.CheckedChanged += new System.EventHandler(this.RadioButton1_CheckedChanged);
             // 
             // radioButton9
             // 
@@ -173,7 +173,7 @@ namespace TrabajoIntegrador
             this.radioButton9.TabStop = true;
             this.radioButton9.Text = "terror";
             this.radioButton9.UseVisualStyleBackColor = true;
-            this.radioButton9.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.radioButton9.CheckedChanged += new System.EventHandler(this.RadioButton1_CheckedChanged);
             // 
             // radioButton8
             // 
@@ -185,7 +185,7 @@ namespace TrabajoIntegrador
             this.radioButton8.TabStop = true;
             this.radioButton8.Text = "aventura";
             this.radioButton8.UseVisualStyleBackColor = true;
-            this.radioButton8.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.radioButton8.CheckedChanged += new System.EventHandler(this.RadioButton1_CheckedChanged);
             // 
             // radioButton7
             // 
@@ -197,7 +197,7 @@ namespace TrabajoIntegrador
             this.radioButton7.TabStop = true;
             this.radioButton7.Text = "drama";
             this.radioButton7.UseVisualStyleBackColor = true;
-            this.radioButton7.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.radioButton7.CheckedChanged += new System.EventHandler(this.RadioButton1_CheckedChanged);
             // 
             // radioButton6
             // 
@@ -209,7 +209,7 @@ namespace TrabajoIntegrador
             this.radioButton6.TabStop = true;
             this.radioButton6.Text = "clasico";
             this.radioButton6.UseVisualStyleBackColor = true;
-            this.radioButton6.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.radioButton6.CheckedChanged += new System.EventHandler(this.RadioButton1_CheckedChanged);
             // 
             // radioButton5
             // 
@@ -221,7 +221,7 @@ namespace TrabajoIntegrador
             this.radioButton5.TabStop = true;
             this.radioButton5.Text = "programacion";
             this.radioButton5.UseVisualStyleBackColor = true;
-            this.radioButton5.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.radioButton5.CheckedChanged += new System.EventHandler(this.RadioButton1_CheckedChanged);
             // 
             // radioButton4
             // 
@@ -233,7 +233,7 @@ namespace TrabajoIntegrador
             this.radioButton4.TabStop = true;
             this.radioButton4.Text = "infantil";
             this.radioButton4.UseVisualStyleBackColor = true;
-            this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.radioButton4.CheckedChanged += new System.EventHandler(this.RadioButton1_CheckedChanged);
             // 
             // radioButton3
             // 
@@ -245,7 +245,7 @@ namespace TrabajoIntegrador
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "policial";
             this.radioButton3.UseVisualStyleBackColor = true;
-            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.RadioButton1_CheckedChanged);
             // 
             // radioButton2
             // 
@@ -257,7 +257,7 @@ namespace TrabajoIntegrador
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "fantasia/c. ficcion";
             this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.RadioButton1_CheckedChanged);
             // 
             // radioButton1
             // 
@@ -269,7 +269,7 @@ namespace TrabajoIntegrador
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "novela";
             this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.RadioButton1_CheckedChanged);
             // 
             // btnMenuLeidos
             // 
@@ -281,7 +281,7 @@ namespace TrabajoIntegrador
             this.btnMenuLeidos.TabIndex = 9;
             this.btnMenuLeidos.Text = "MAS LEIDOS";
             this.btnMenuLeidos.UseVisualStyleBackColor = false;
-            this.btnMenuLeidos.Click += new System.EventHandler(this.btnMenuLeidos_Click);
+            this.btnMenuLeidos.Click += new System.EventHandler(this.BtnMenuLeidos_Click);
             // 
             // btnMenuUltimos
             // 
@@ -293,7 +293,7 @@ namespace TrabajoIntegrador
             this.btnMenuUltimos.TabIndex = 8;
             this.btnMenuUltimos.Text = "ULTIMOS INGRESOS";
             this.btnMenuUltimos.UseVisualStyleBackColor = false;
-            this.btnMenuUltimos.Click += new System.EventHandler(this.btnMenuUltimos_Click);
+            this.btnMenuUltimos.Click += new System.EventHandler(this.BtnMenuUltimos_Click);
             // 
             // btnMenuCatalogo
             // 
@@ -305,7 +305,7 @@ namespace TrabajoIntegrador
             this.btnMenuCatalogo.TabIndex = 6;
             this.btnMenuCatalogo.Text = "CATALOGO GENERAL";
             this.btnMenuCatalogo.UseVisualStyleBackColor = false;
-            this.btnMenuCatalogo.Click += new System.EventHandler(this.btnMenuCatalogo_Click);
+            this.btnMenuCatalogo.Click += new System.EventHandler(this.BtnMenuCatalogo_Click);
             // 
             // panelLibros
             // 
