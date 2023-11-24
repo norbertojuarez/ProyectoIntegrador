@@ -25,8 +25,7 @@ namespace TrabajoIntegrador
             ValidarAdministrador(bienvenida);            
             labelMenuBienvenida.Text = "Bienvenido a la biblioteca " + bienvenida.ToUpper();
             this.formLogin = formLogin;
-        }
-               
+        }               
         
         public List<Libro> listaLibros = new List<Libro>();
         List<Libro> listaActual = new List<Libro>();
@@ -90,9 +89,7 @@ namespace TrabajoIntegrador
                         Libro nuevoLibro = new Libro(id, titulo, autor, rutaImg, rutaPdf, categoria, fecha, lecturas);
                         listaLibros.Add(nuevoLibro);
                         identificador++;
-
-                    }
-                    
+                    }                    
                 }
             }     
             return listaLibros;
@@ -131,8 +128,7 @@ namespace TrabajoIntegrador
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show($"Error al cargar la imagen local: {ex.Message}");
-                       
+                        MessageBox.Show($"Error al cargar la imagen local: {ex.Message}");                       
                     }
                 }               
               

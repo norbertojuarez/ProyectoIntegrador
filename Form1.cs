@@ -19,7 +19,6 @@ namespace TrabajoIntegrador
         }
 
         public List<Usuario> listaUsuarios = new List<Usuario>(); //Lista de usuarios donde se almacenaran los usuarios creados
-        public int identificadorUsuario = 1;//Variable que guardará el numero de Usuarios creado
         public bool encontrado = false;//Boleano para cuando se encuentre el usuario en la base de datos
 
         //CLASE USUARIO Y SU CONSTRUCTOR
@@ -52,8 +51,7 @@ namespace TrabajoIntegrador
                     string contrasenia = campos[2];
                     //con el array descompuesto creamos un nuevo usuario
                     Usuario nuevoUsuario = new Usuario(id, nombre, contrasenia);
-                    listaUsuarios.Add(nuevoUsuario);//lo agregamos a la lista de usuarios
-                    identificadorUsuario++;//incrementamos la variable que cuenta la cantidad de usuarios                  
+                    listaUsuarios.Add(nuevoUsuario);//lo agregamos a la lista de usuarios              
                 }
             }
         }

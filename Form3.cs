@@ -25,7 +25,7 @@ namespace TrabajoIntegrador
         {
             if (textBoxRegistroUsuario.Text != string.Empty && textBoxRegistroContrasenia.Text != string.Empty)
             {
-                int Id = formularioLogin.identificadorUsuario;
+                int Id = formularioLogin.listaUsuarios.Count()+1;
                 string nombre = textBoxRegistroUsuario.Text;
                 string contrasenia = textBoxRegistroContrasenia.Text;
                 FormLogin.Usuario nuevoUsuario = new FormLogin.Usuario(Id, nombre, contrasenia);
@@ -40,8 +40,7 @@ namespace TrabajoIntegrador
                 }
                 if (!usuarioExistente)
                 {
-                    formularioLogin.listaUsuarios.Add(nuevoUsuario);
-                    formularioLogin.identificadorUsuario++;
+                    formularioLogin.listaUsuarios.Add(nuevoUsuario);                  
                     string rutaArchivo = Environment.CurrentDirectory + "\\BDUsuarios.txt";
                     using (StreamWriter writer = new StreamWriter(rutaArchivo))
                     {
